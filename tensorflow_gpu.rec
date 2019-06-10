@@ -1,0 +1,20 @@
+# latest tensorflow_gpu for ICS-ACI
+
+BootStrap: docker
+From: tensorflow/tensorflow:latest-gpu
+
+%labels
+Author jmp579
+
+#%runscript
+#    exec /usr/local/bin/python "$@"
+
+%post
+    #------------------------------------------------------------------------------
+    # Create local binding point for our HPC
+    #------------------------------------------------------------------------------
+    mkdir -p /storage/home
+    mkdir -p /storage/work
+    mkdir -p /gpfs/scratch
+    mkdir -p /gpfs/group
+    mkdir -p /var/spool/torque
