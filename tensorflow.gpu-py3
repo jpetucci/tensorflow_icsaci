@@ -1,7 +1,7 @@
 # latest tensorflow_gpu for ICS-ACI
 
 BootStrap: docker
-From: tensorflow/tensorflow:latest-gpu-py3
+From: tensorflow/tensorflow:1.13.1-gpu-py3
 
 %labels
 Author jmp579
